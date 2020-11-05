@@ -1,7 +1,7 @@
 import ROOT
 import os, types
 from math import *
-from PhysicsTools.HeppyCore.utils.deltar import *
+#from PhysicsTools.HeppyCore.utils.deltar import *
 
 class JetReCalibrator:
     def __init__(self,globalTag,jetFlavour,doResidualJECs,jecPath,upToLevel=3,
