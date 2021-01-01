@@ -8,7 +8,7 @@ import os
 import sys
 import ROOT
 ROOT.PyConfig.IgnoreCommandLineOptions = True
-<<<<<<< HEAD
+
 from importlib import import_module
 from PhysicsTools.NanoAODTools.postprocessing.framework.postprocessor import PostProcessor
 ##soon to be deprecated
