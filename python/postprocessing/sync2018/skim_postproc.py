@@ -33,8 +33,9 @@ from PhysicsTools.NanoAODTools.postprocessing.modules.jme.jetmetHelperRun2 impor
 #                                         False)
 
 jmeCorrections = createJMECorrector(isMC=True, dataYear=2018, runPeriod="B",
-                                    jesUncert="Merged", 
+                                    jesUncert="Total", 
                                     jetType="AK4PFchs",
+                                    noGroom="True",
                                     applyHEMfix=True,
                                     splitJER=False,
                                     metBranchName="MET")
