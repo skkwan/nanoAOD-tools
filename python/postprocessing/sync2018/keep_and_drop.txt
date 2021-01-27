@@ -1,12 +1,7 @@
 # this is a comment
 
-drop *
-keep Jet*
-keep FatJet*
-keep SubJet*
-keep GenJet*
-keep run
-keep luminosityBlock
-keep event
+drop FatJet*
+drop Electron*
+
 
 
