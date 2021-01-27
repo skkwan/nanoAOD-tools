@@ -1,7 +1,30 @@
 # this is a comment
 
-drop FatJet*
-drop Electron*
+drop *
+
+
+keep nMuon
+keep nTau
+keep Jet_*
+keep Tau_*
+keep Muon_*
+keep GenJet_*
+keep MET_*
+keep GenPart_*
+
+keep genWeight
+keep luminosityBlock
+keep run
+keep event
+
+keep Electron_*
+keep HLT_IsoMu20*
+keep HLT_IsoMu24
+keep HLT_IsoMu27
+
+keep *CorrT1METJet*
+keep RawMET_*
+keep fixedGridRhoFastjet*
 
 
 
