@@ -40,14 +40,12 @@ jmeCorrections = createJMECorrector(isMC=True, dataYear=2018, runPeriod="B",
                                     splitJER=False,
                                     metBranchName="MET")
 
-fnames=['root://cmsxrootd.fnal.gov//store/mc/RunIIAutumn18NanoAODv7/VBFHToTauTau_M125_13TeV_powheg_pythia8/NANOAODSIM/Nano02Apr2020_102X_upgrade2018_realistic_v21_ext1-v1/100000/04B9A063-2245-D84C-A0EF-8AF03AE9B9CC.root']
+fnames=['in.root']
 
 #p=PostProcessor(".",fnames,"Jet_pt>150","",[jetmetUncertainties2016(),exampleModuleConstr()],provenance=True)
 p=PostProcessor(".", fnames, cut="(nMuon > 0) && (nTau > 0)",
                 branchsel="keep_and_drop.txt",
                 modules=[jmeCorrections()],
-                histFileName="test/histOut.root",
-                histDirName="",
                 provenance=True)
 
 p.run()
