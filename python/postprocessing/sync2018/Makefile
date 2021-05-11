@@ -1,4 +1,6 @@
 
 
 clean :
-	rm TEMP*postproc.py
+	rm -rf scripts_*/
+	rm *.root
+	rm .__afs*
