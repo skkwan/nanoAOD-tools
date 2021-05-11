@@ -11,6 +11,7 @@ keep Muon_*
 keep GenJet_*
 keep MET_*
 keep GenPart_*
+keep TrigObj_*
 
 keep genWeight
 keep luminosityBlock
