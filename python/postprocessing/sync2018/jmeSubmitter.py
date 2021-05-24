@@ -72,8 +72,8 @@ def main(argv=None):
 
     # create bash script
     bash_name = '%s/%s_%i_%s.sh' % (dag_dir+'inputs', channel, period, sample_name)
-    bashScript = '#!/bin/bash\n input=$(<$INPUT)\n echo \".sh: input is $input\"\n'
-    bashScript += "output=$(<$OUTPUT)\n echo \".sh: output is $output\"\n"
+    bashScript = '#!/bin/bash\n input=$INPUT\n echo \".sh: input is $input\"\n'
+    bashScript += 'output=$OUTPUT\n echo \".sh: output is $output\"\n'
 #    bashScript += '$CMSSW_BASE/bin/$SCRAM_ARCH/SVFitStandAloneFSA inputfile=$input newOutputFile=1.0 newFile=\'$OUTPUT\'' #% (channel, sample_name, period)
     bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $output $input '
     bashScript += '--bi $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/keep_and_drop_input.txt '
