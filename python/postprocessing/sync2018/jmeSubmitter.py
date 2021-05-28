@@ -73,11 +73,12 @@ def main(argv=None):
 
     # create bash script
     bash_name = '%s/%s_%i_%s.sh' % (dag_dir+'inputs', channel, period, sample_name)
-    bashScript = '#!/bin/bash\n input=$(<$INPUT)\n'
-    bashScript += 'echo \"in .sh: input is $input (ignore farmoutAnalysisJobs output environmental variable $OUTPUT)\"\n'
-    # bashScript += 'output=$(<$OUTPUT)\n'
-    bashScript += 'MYOUTPUTDIR=%s\n' % (output_dir)
-    # bashScript += 'MYOUTPUTDIR=.\n'
+    bashScript = '#!/bin/bash\n input=$(<$INPUT)\n echo \".sh: input is $input\"\n'
+    # bashScript += 'output=$(<$OUTPUT)\n echo \".sh: output directory is $output\"\n' 
+    bashScript += 'output=\".\"\n echo \".sh: output directory is $output\"\n'  # use . as output directory 
+
+    # bashScript = '#!/bin/bash\n input=\"root://cmsxrootd.fnal.gov///store/mc/RunIIAutumn18NanoAODv7/VBFHToTauTau_M125_13TeV_powheg_pythia8/NANOAODSIM/Nano02Apr2020_102X_upgrade2018_realistic_v21_ext1-v1/100000/A3EB6B6E-8907-E345-B897-D0709785E2A1.root\"\n'
+    # bashScript += 'output=\"/hdfs/store/user/skkwan/\"\n'
     
     bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $MYOUTPUTDIR $input ' 
     # bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $output $input '
