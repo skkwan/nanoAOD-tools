@@ -1,4 +1,4 @@
 # Run jmeSubmitter.py
 
-jobname="testlocal"
-python jmeSubmitter.py --sampledir VBFHToTauTau --jobName ${jobname} --inFile test_local_input.txt 
+jobname="May-28-2021-2"
+python jmeSubmitter.py --sampledir VBFHToTauTau --jobName ${jobname} --inFile test_fwklite_input.txt --dryrun
