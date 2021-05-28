@@ -64,16 +64,21 @@ def main(argv=None):
     os.system('mkdir -p %s' % (dag_dir+'inputs'))
 
     # output dir
-    output_dir = '/hdfs/store/user/%s/%s/%s/' % (pwd.getpwuid(os.getuid())[0], jobName, sample_name) 
-
+    # output_dir = 'srm://cmssrm.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/store/user/%s/%s/%s/'\
+    output_dir = '/store/user/%s/%s/%s/' % (pwd.getpwuid(os.getuid())[0], jobName, sample_name)
 
     # create file list
     filesperjob = 1
 
     # create bash script
     bash_name = '%s/%s_%i_%s.sh' % (dag_dir+'inputs', channel, period, sample_name)
-    bashScript = '#!/bin/bash\n input=$INPUT\n echo \".sh: input is $input\"\n'
-    bashScript += 'output=$OUTPUT\n echo \".sh: output is $output\"\n'
+    bashScript = '#!/bin/bash\n input=$(<$INPUT)\n echo \".sh: input is $input\"\n'
+    bashScript += 'output=%s\n echo \".sh: output directory is $output\"\n' % (output_dir)
+
+    # bashScript = '#!/bin/bash\n input=\"root://cmsxrootd.fnal.gov///store/mc/RunIIAutumn18NanoAODv7/VBFHToTauTau_M125_13TeV_powheg_pythia8/NANOAODSIM/Nano02Apr2020_102X_upgrade2018_realistic_v21_ext1-v1/100000/A3EB6B6E-8907-E345-B897-D0709785E2A1.root\"\n'
+    # bashScript += 'output=\"/hdfs/store/user/skkwan/\"\n'
+    
+
 #    bashScript += '$CMSSW_BASE/bin/$SCRAM_ARCH/SVFitStandAloneFSA inputfile=$input newOutputFile=1.0 newFile=\'$OUTPUT\'' #% (channel, sample_name, period)
     bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $output $input '
     bashScript += '--bi $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/keep_and_drop_input.txt '
