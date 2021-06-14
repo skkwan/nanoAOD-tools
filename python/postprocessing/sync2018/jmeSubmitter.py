@@ -65,6 +65,7 @@ def main(argv=None):
     os.system('mkdir -p %s' % (dag_dir+'inputs'))
 
     # output dir
+
     # output_dir = '/hdfs/store/user/%s/%s/%s/' % (pwd.getpwuid(os.getuid())[0], jobName, sample_name)
     output_dir = '/store/user/%s/%s/%s/' % (pwd.getpwuid(os.getuid())[0], jobName, sample_name)
 
@@ -73,6 +74,7 @@ def main(argv=None):
 
     # create bash script
     bash_name = '%s/%s_%i_%s.sh' % (dag_dir+'inputs', channel, period, sample_name)
+
     bashScript = '#!/bin/bash\n input=$(<$INPUT)\n'
     bashScript += 'echo \"in .sh: input is $input (ignore farmoutAnalysisJobs output environmental variable $OUTPUT)\"\n'
     # bashScript += 'output=$(<$OUTPUT)\n'
