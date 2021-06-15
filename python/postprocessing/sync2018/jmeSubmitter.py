@@ -78,8 +78,8 @@ def main(argv=None):
     bashScript = '#!/bin/bash\n input=$(<$INPUT)\n'
     bashScript += 'echo \"in .sh: input is $input (ignore farmoutAnalysisJobs output environmental variable $OUTPUT)\"\n'
     # bashScript += 'output=$(<$OUTPUT)\n'
-    bashScript += 'MYOUTPUTDIR=%s\n' % (output_dir)
-    # bashScript += 'MYOUTPUTDIR=.\n'
+    # bashScript += 'MYOUTPUTDIR=%s\n' % (output_dir)
+    bashScript += 'MYOUTPUTDIR=.\n'
     
     bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $MYOUTPUTDIR $input ' 
     # bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $output $input '
@@ -94,7 +94,8 @@ def main(argv=None):
 
     # create farmout command
     farmoutString = 'farmoutAnalysisJobs --infer-cmssw-path --fwklite --input-file-list=%s' % (args.inFile)
-    farmoutString += ' --submit-dir=%s --output-dag-file=%s --output-dir=%s' % (submit_dir, dag_dir, output_dir)
+    # farmoutString += ' --submit-dir=%s --output-dag-file=%s --output-dir=%s' % (submit_dir, dag_dir, output_dir)
+    farmoutString += ' --submit-dir=%s --output-dag-file=%s --output=%s' % (submit_dir, dag_dir, output_dir)   
     farmoutString += ' --input-files-per-job=%i %s %s' % (filesperjob, jobName, bash_name)
 
     if not args.dryrun:
