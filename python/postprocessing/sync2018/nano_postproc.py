@@ -15,6 +15,8 @@ ROOT.PyConfig.IgnoreCommandLineOptions = True
 if __name__ == "__main__":
     from optparse import OptionParser
     parser = OptionParser(usage="%prog [options] outputDir inputFiles")
+    parser.add_option("--outputFileName", dest="outputFileName", type="string", default=None,
+                      help="Output file name, which will replace the default file name")
     parser.add_option("-s", "--postfix", dest="postfix", type="string", default=None,
                       help="Postfix which will be appended to the file name (default: _Friend for friends, _Skim for skims)")
     parser.add_option("-J", "--json", dest="json", type="string",
@@ -95,6 +97,7 @@ if __name__ == "__main__":
     modules = [jmeCorrections()]
 
     p = PostProcessor(outdir, args,
+                      outputFileName=options.outputFileName,
                       cut=options.cut,
                       branchsel=options.branchsel_in,
                       modules=modules,

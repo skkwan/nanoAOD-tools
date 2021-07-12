@@ -76,12 +76,14 @@ def main(argv=None):
     bash_name = '%s/%s_%i_%s.sh' % (dag_dir+'inputs', channel, period, sample_name)
 
     bashScript = '#!/bin/bash\n input=$(<$INPUT)\n'
-    bashScript += 'echo \"in .sh: input is $input (ignore farmoutAnalysisJobs output environmental variable $OUTPUT)\"\n'
-    # bashScript += 'output=$(<$OUTPUT)\n'
-    # bashScript += 'MYOUTPUTDIR=%s\n' % (output_dir)
+    # bashScript += 'echo \"in .sh: input is $input (ignore farmoutAnalysisJobs output environmental variable $OUTPUT)\"\n'
+    bashScript += 'output=$OUTPUT\n'  # don't pipe the $OUTPUT variable (it's the destination file name which doesn't exist), just duplicate it
+    # bashScript += 'echo \"in .sh: input is $input, output is $output \"\n'
     bashScript += 'MYOUTPUTDIR=.\n'
+    bashScript += 'echo \"in .sh: input is $input, output dir is $MYOUTPUTDIR, output file name is $output \"\n'
     
-    bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $MYOUTPUTDIR $input ' 
+    bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $MYOUTPUTDIR $input '
+    bashScript += '--outputFileName $output ' 
     # bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $output $input '
     bashScript += '--bi $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/keep_and_drop_input.txt '
     bashScript += '--bo $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/keep_and_drop_output.txt '
