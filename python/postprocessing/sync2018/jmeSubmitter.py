@@ -87,7 +87,7 @@ def main(argv=None):
     # bashScript += 'python $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/nano_postproc.py $output $input '
     bashScript += '--bi $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/keep_and_drop_input.txt '
     bashScript += '--bo $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/sync2018/keep_and_drop_output.txt '
-    bashScript += '-N 3'
+    # bashScript += '-N 3'  #run all entries
     bashScript += '\n'
 
     with open(bash_name,'w') as file:
