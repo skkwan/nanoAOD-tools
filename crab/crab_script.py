@@ -1,18 +1,36 @@
 #!/usr/bin/env python
 import os
+import sys
+import ROOT
+ROOT.PyConfig.IgnoreCommandLineOptions = True
+from importlib import import_module
 from PhysicsTools.NanoAODTools.postprocessing.framework.postprocessor import *
-
+##soon to be deprecated                                                                                
+from PhysicsTools.NanoAODTools.postprocessing.modules.jme.jetmetUncertainties import *
+##new way of using jme uncertainty                                                                  
+from PhysicsTools.NanoAODTools.postprocessing.modules.jme.jetmetHelperRun2 import *
 # this takes care of converting the input files from CRAB
 from PhysicsTools.NanoAODTools.postprocessing.framework.crabhelper import inputFiles, runsAndLumis
 
-from PhysicsTools.NanoAODTools.postprocessing.examples.exampleModule import *
+jmeCorrections = createJMECorrector(isMC=True, dataYear=2018, runPeriod="A",
+                                    jesUncert="Total",
+                                    jetType="AK4PFchs",
+                                    noGroom="True",
+                                    applyHEMfix=True,
+                                    splitJER=False,
+                                    metBranchName="MET")
+
+#fnames = ["04B9A063-2245-D84C-A0EF-8AF03AE9B9CC.root"]
+
+
 p = PostProcessor(".",
                   inputFiles(),
-                  "Jet_pt>200",
-                  modules=[exampleModuleConstr()],
+#                  fnames,
+                  modules=[jmeCorrections()],
                   provenance=True,
                   fwkJobReport=True,
                   jsonInput=runsAndLumis())
+
 p.run()
 
 print("DONE")
