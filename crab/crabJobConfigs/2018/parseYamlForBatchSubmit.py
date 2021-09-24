@@ -28,12 +28,13 @@ list = yaml.safe_load(list_file)
 
 
 for d in list['toSubmit']:
-    # print(d,list["toSubmit"][d])
+    print(d,list["toSubmit"][d])
     
     # Look for cfg.py files matching this regex
-    cfgList = glob.glob('crab_'+d+'*_cfg.py')
+    cfgList = glob.glob('crab_'+d+"_"+list["nameString"]+'*_cfg.py')
 
     # Check that there is only one cfg.py file which can be run, for each dataset
+    assert(len(cfgList) != 0), '[ERROR:] No cfg.py matching regex found for dataset %s' % d
     assert(len(cfgList) == 1), '[ERROR:] Ambiguity in which cfg.py to run for dataset %s, found multiple instances: \n %s' % (d, cfgList)
 
     # Only one cfg file: extract the string
