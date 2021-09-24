@@ -4,8 +4,6 @@ __init__.py
 .#*
 #*#
 *~
-build
 *.d
 *.so
-*.pcm
-TEMP*postproc.py
+crab_*realistic_cfg.py

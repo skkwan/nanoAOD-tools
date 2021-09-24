@@ -1,3 +1,6 @@
+# Currently a minimal working example for VBF Sync Sample
+# For the template to edit, use crab_template_cfg.py
+
 from WMCore.Configuration import Configuration
 from CRABClient.UserUtilities import config
 
