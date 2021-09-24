@@ -65,14 +65,40 @@ mc_2018:
     
 
 #-------------------------------------------------------------#
-# data_2018:
-#    year:     2018
-#    script:   crab_script_2018Data.py  # MAKE THIS
-#    bash: # MAKE THIS
-#    prodtag:  Run2018A-02Apr2020-v1_NanoAOD
-#    inputDBS: phys03
-#    datasets:
-#       SingleMuon-Run2018A: /SingleMuon/Run2018A-02Apr2020-v1/NANOAOD
-#       SingleMuon-Run2018B: /SingleMuon/Run2018B-02Apr2020-v1/NANOAOD
-#       SingleMuon-Run2018C: /SingleMuon/Run2018C-02Apr2020-v1/NANOAOD
-#       SingleMuon-Run2018D: /SingleMuon/Run2018D-02Apr2020-v1/NANOAOD
+data_2018_A:
+   year:     2018
+   script:   crab_bash_2018DataA.py   
+   bash:     crab_bash_2018DataA.sh
+   prodtag:  Run2018A-02Apr2020-v1_NanoAOD
+   inputDBS: phys03
+   datasets:
+      SingleMuon-Run2018A: /SingleMuon/Run2018A-02Apr2020-v1/NANOAOD
+
+data_2018_B:
+   year:     2018
+   script:   crab_bash_2018DataB.py   
+   bash:     crab_bash_2018DataB.sh
+   prodtag:  Run2018B-02Apr2020-v1_NanoAOD
+   inputDBS: phys03
+   datasets:
+      SingleMuon-Run2018B: /SingleMuon/Run2018B-02Apr2020-v1/NANOAOD
+
+data_2018_C:
+   year:     2018
+   script:   crab_bash_2018DataC.py   
+   bash:     crab_bash_2018DataC.sh
+   prodtag:  Run2018C-02Apr2020-v1_NanoAOD
+   inputDBS: phys03
+   datasets:
+      SingleMuon-Run2018C: /SingleMuon/Run2018C-02Apr2020-v1/NANOAOD
+
+data_2018_D:
+   year:     2018
+   script:   crab_bash_2018DataD.py   
+   bash:     crab_bash_2018DataD.sh
+   prodtag:  Run2018D-02Apr2020-v1_NanoAOD
+   inputDBS: phys03
+   datasets:
+      SingleMuon-Run2018D: /SingleMuon/Run2018D-02Apr2020-v1/NANOAOD
+
+#-------------------------------------------------------------#

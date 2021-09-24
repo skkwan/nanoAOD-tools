@@ -7,3 +7,4 @@ __init__.py
 *.d
 *.so
 crab_*realistic_cfg.py
+crab_*SingleMuon*_cfg.py

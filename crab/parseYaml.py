@@ -7,8 +7,10 @@ config_file = open("datasetConfig2018.yml")
 config = yaml.safe_load(config_file)
 
 
+#-------------------------------------------------------#
 # for eraType in ["mc_2018", "embed_2018", "data_2018"]:
-for eraType in ["mc_2018"]:
+# for eraType in ["mc_2018"]:
+for eraType in ["data_2018_A", "data_2018_B", "data_2018_C", "data_2018_D"]:
    for d in config[eraType]["datasets"]:
 
       dir = "crabJobConfigs/" + str(config[eraType]["year"]) + "/" 
@@ -37,3 +39,6 @@ for eraType in ["mc_2018"]:
             t7 = t6.replace('OUTPUT_TAG',              outputTag)
 
             writefile.write(t7)
+
+#-------------------------------------------------------#
+
