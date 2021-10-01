@@ -6,7 +6,7 @@ Tools for working with NanoAOD (adapted by skkwan). Forked from NanoAODTools.
     ```	    
     cmsrel CMSSW_10_6_0
     cd CMSSW_10_6_0/src
-    git clone git@github.com:skkwan/nanoAOD-tools.git
+    git clone git@github.com:skkwan/nanoAOD-tools.git PhysicsTools/NanoAODTools
     cd PhysicsTools/NanoAODTools
     cmsenv	
     scram b
@@ -17,6 +17,9 @@ Tools for working with NanoAOD (adapted by skkwan). Forked from NanoAODTools.
 ### Do this once each time you change the CRAB config file template (or are setting up)
    1. In `crab/`, `datasetConfig2018.yml` lists the input dataset names and their DAS, as well as
       which crab config and crab bash script template to use. 
+      
+      The template crab config file is called `crab_template_cfg.py`.
+  
    2. Create a unique crab config file:
       ```
       cd crab/
