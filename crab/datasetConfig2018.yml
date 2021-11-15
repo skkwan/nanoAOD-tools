@@ -53,15 +53,19 @@ mc_2018:
       # Signal samples
       SUSYGluGluToHToAA_AToBB_AToTauTau_M-45: /SUSYGluGluToHToAA_AToBB_AToTauTau_M-45_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8/RunIIAutumn18NanoAODv7-Nano02Apr2020_102X_upgrade2018_realistic_v21-v1/NANOAODSIM
       SUSYVBFHToAA_AToBB_AToTauTau_M-45:      /SUSYVBFHToAA_AToBB_AToTauTau_M-45_FilterTauTauTrigger_TuneCP5_13TeV_madgraph_pythia8/RunIIAutumn18NanoAODv7-Nano02Apr2020_102X_upgrade2018_realistic_v21-v1/NANOAODSIM
-# #-------------------------------------------------------------#
-# embed_2018:
-#   year:     2018
-#   script:   crab_script_2018Emb.py  # MAKE THIS
-#   bash:   # MAKE THIS
-#   prodtag:  102X_PrivateProd
-#   inputDBS: phys03
-#   datasets:
-#     EmbeddingRun2018A-MuTau: /hdfs/store/user/skkwan/EmbeddingRun2018B/CMSSW_10_6_16_102X_EmbeddingRun2018B_MuTauFinalState-inputDoubleMu/210922_033140/0000
+#-------------------------------------------------------------#
+
+embed_2018:
+   year:     2018
+   script:   crab_script_2018Emb.py  
+   bash:     crab_bash_2018Embedded.sh
+   prodtag:  CMSSW_10_6_16_102X
+   inputDBS: phys03
+   datasets:
+     EmbeddingRun2018A-MuTau: /EmbeddingRun2018A/skkwan-CMSSW_10_6_16_102X_EmbeddingRun2018A_MuTauFinalState-inputDoubleMu-f331e185cebfd33456fd5c481fd4a040/USER
+     EmbeddingRun2018B-MuTau: /EmbeddingRun2018B/skkwan-CMSSW_10_6_16_102X_EmbeddingRun2018B_MuTauFinalState-inputDoubleMu-b351189ddbae69df39b0343b8e904fcc/USER
+     EmbeddingRun2018C-MuTau: /EmbeddingRun2018C/skkwan-CMSSW_10_6_16_102X_EmbeddingRun2018C_MuTauFinalState-inputDoubleMu-b351189ddbae69df39b0343b8e904fcc/USER
+     EmbeddingRun2018D-MuTau: /EmbeddingRun2018D/skkwan-CMSSW_10_6_16_102X_EmbeddingRun2018D_MuTauFinalState-inputDoubleMu-f09919812c9e950da28fd601c5d333c6/USER
     
 
 #-------------------------------------------------------------#

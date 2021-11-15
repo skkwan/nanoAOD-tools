@@ -8,9 +8,11 @@ config = yaml.safe_load(config_file)
 
 
 #-------------------------------------------------------#
-# for eraType in ["mc_2018", "embed_2018", "data_2018"]:
-for eraType in ["mc_2018"]:
+# for eraType in ["mc_2018", "embed_2018"]:
+
 # for eraType in ["data_2018_A", "data_2018_B", "data_2018_C", "data_2018_D"]:
+
+for eraType in ["embed_2018"]:
    for d in config[eraType]["datasets"]:
 
       dir = "crabJobConfigs/" + str(config[eraType]["year"]) + "/" 
@@ -31,7 +33,6 @@ for eraType in ["mc_2018"]:
          with open(newCRABConfFile, 'w+') as writefile:
 
             t2 = t1.replace('REQUEST_NAME',            requestName)
-#            t3 = t2.replace('CRAB_SCRIPT_PYTHON_NAME', crabScriptPython.replace('templates/', ''))
             t3 = t2.replace('CRAB_BASH_SCRIPT',        crabBashScript)
             t4 = t3.replace('CRAB_PYTHON_SCRIPT_PATH', crabPythonScript)
             t5 = t4.replace('DAS_NAME',                dasName)
