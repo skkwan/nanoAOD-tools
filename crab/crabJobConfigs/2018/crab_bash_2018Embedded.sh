@@ -24,5 +24,5 @@ mv python $CMSSW_BASE/python
 
 echo Found Proxy in: $X509_USER_PROXY
 echo First argument is $1
-python crab_script_2018DataC.py $1
+python crab_script_2018Emb.py $1
 fi
