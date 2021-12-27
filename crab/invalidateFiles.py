@@ -37,6 +37,6 @@ invalidateCommand="python $DBS3_CLIENT_ROOT/examples/DataOpsScripts/DBS3SetFileS
 with open(args.list_of_lfn) as infile:
     for line in infile:
         print(invalidateCommand + line)
-        if (execute):
+        if (args.execute):
             os.system(invalidateCommand + line)
             
