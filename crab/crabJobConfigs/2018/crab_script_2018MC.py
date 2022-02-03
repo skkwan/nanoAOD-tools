@@ -13,7 +13,7 @@ from PhysicsTools.NanoAODTools.postprocessing.modules.jme.jetmetHelperRun2 impor
 from PhysicsTools.NanoAODTools.postprocessing.framework.crabhelper import inputFiles, runsAndLumis
 
 jmeCorrections = createJMECorrector(isMC=True, dataYear=2018, runPeriod="A",
-                                    jesUncert="Total",
+                                    jesUncert="Merged",
                                     jetType="AK4PFchs",
                                     noGroom="True",
                                     applyHEMfix=True,
