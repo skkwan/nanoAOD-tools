@@ -32,6 +32,10 @@ config.Data.outLFNDirBase    = '/store/user/skkwan/NanoPost'
 config.Data.publication      = True
 config.Data.outputDatasetTag = 'OUTPUT_TAG'
 
+#config.JobType.maxJobRuntimeMin = 300
+#config.JobType.numCores = 8
+#config.JobType.maxMemoryMB = 9000
+
 config.section_("Site")
 config.Site.storageSite = "T2_US_Wisconsin"
 
