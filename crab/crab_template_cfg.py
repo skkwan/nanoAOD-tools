@@ -24,9 +24,9 @@ config.JobType.sendPythonFolder = True
 config.section_("Data")
 config.Data.inputDataset = 'DAS_NAME'
 config.Data.inputDBS     = 'INPUT_DBS'
-config.Data.splitting    = 'FileBased'
-config.Data.unitsPerJob  = 1
-#config.Data.splitting    = 'Automatic'
+#config.Data.splitting    = 'FileBased'
+#config.Data.unitsPerJob  = 1
+config.Data.splitting    = 'Automatic'
 
 config.Data.outLFNDirBase    = '/store/user/skkwan/NanoPost'
 config.Data.publication      = True
