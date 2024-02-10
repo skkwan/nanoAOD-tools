@@ -32,7 +32,8 @@ parser.add_argument("--list",
 
 args = parser.parse_args()
 
-invalidateCommand="python $DBS3_CLIENT_ROOT/examples/DataOpsScripts/DBS3SetFileStatus.py --url=https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter --status=invalid --recursive=False  --files="
+
+invalidateCommand="crab setfilestatus --status INVALID --file "
 
 with open(args.list_of_lfn) as infile:
     for line in infile:
