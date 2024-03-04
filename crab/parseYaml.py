@@ -1,6 +1,7 @@
 # parseYaml.py
 
 import yaml
+import os
 
 config_file = open("datasetConfig2018.yml")
 
@@ -8,10 +9,9 @@ config = yaml.safe_load(config_file)
 
 
 #-------------------------------------------------------#
-# for eraType in ["mc_2018", "embed_2018"]:
+#for eraType in ["mc_2018"]:
 
-# for eraType in ["data_2018_A", "data_2018_B", "data_2018_C", "data_2018_D"]:
-
+#for eraType in ["embed_2018", "data_2018_A", "data_2018_B", "data_2018_C", "data_2018_D"]:
 for eraType in ["embed_2018"]:
    for d in config[eraType]["datasets"]:
 
