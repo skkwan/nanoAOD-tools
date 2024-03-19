@@ -18,7 +18,7 @@ config.JobType.psetName   = 'PSet.py'
 config.JobType.scriptExe  = 'CRAB_BASH_SCRIPT'
 # config.JobType.scriptArgs = ['script=CRAB_SCRIPT_PYTHON_NAME']
 # hadd nano will not be needed once nano tools are in cmssw
-config.JobType.inputFiles = ['CRAB_PYTHON_SCRIPT_PATH', '../../../scripts/haddnano.py']
+config.JobType.inputFiles = ['CRAB_PYTHON_SCRIPT_PATH', '../scripts/haddnano.py']
 #config.JobType.sendPythonFolder = True
 
 config.section_("Data")
