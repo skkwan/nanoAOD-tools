@@ -20,5 +20,3 @@ for eraType in ["mc_2018"]:
       print(command)
       os.system(command)
       os.system(f"echo '\n\n' | tee -a {reportname}")
-
-# crab_NanoPost_Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-15_MA2-70_RunIISummer20UL18NanoAODv9
