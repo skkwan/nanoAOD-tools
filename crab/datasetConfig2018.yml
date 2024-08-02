@@ -208,8 +208,8 @@ embed_2018:
 #-------------------------------------------------------------#
 data_2018_A:
    year:     2018
-   script:   crab_script_2018DataA.py   
-   bash:     crab_bash_2018DataA.sh
+   script:   crabJobConfigs/2018/crab_script_2018DataA.py   
+   bash:     crabJobConfigs/2018/crab_bash_2018DataA.sh
    prodtag:  UL2018_MiniAODv2_NanoAODv9
    inputDBS: global
    datasets:
@@ -220,8 +220,8 @@ data_2018_A:
 
 data_2018_B:
    year:     2018
-   script:   crab_script_2018DataB.py   
-   bash:     crab_bash_2018DataB.sh
+   script:   crabJobConfigs/2018/crab_script_2018DataB.py   
+   bash:     crabJobConfigs/2018/crab_bash_2018DataB.sh
    prodtag:  UL2018_MiniAODv2_NanoAODv9
    inputDBS: global
    datasets:
@@ -231,8 +231,8 @@ data_2018_B:
 
 data_2018_C:
    year:     2018
-   script:   crab_script_2018DataC.py   
-   bash:     crab_bash_2018DataC.sh
+   script:   crabJobConfigs/2018/crab_script_2018DataC.py   
+   bash:     crabJobConfigs/2018/crab_bash_2018DataC.sh
    prodtag:  UL2018_MiniAODv2_NanoAODv9
    inputDBS: global
    datasets:
@@ -242,8 +242,8 @@ data_2018_C:
 
 data_2018_D:
    year:     2018
-   script:   crab_script_2018DataD.py   
-   bash:     crab_bash_2018DataD.sh
+   script:   crabJobConfigs/2018/crab_script_2018DataD.py   
+   bash:     crabJobConfigs/2018/crab_bash_2018DataD.sh
    prodtag:  UL2018_MiniAODv2_NanoAODv9
    inputDBS: global
    datasets:
