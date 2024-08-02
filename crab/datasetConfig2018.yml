@@ -214,7 +214,7 @@ data_2018_A:
    inputDBS: global
    datasets:
       SingleMuon-Run2018A: /SingleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD
-      EGamma-Run2018A: /EGamma/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD
+      EGamma-Run2018A: /EGamma/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD
       MuonEG-Run2018A: /MuonEG/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD    
       
 
