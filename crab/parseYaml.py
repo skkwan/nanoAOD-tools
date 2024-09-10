@@ -9,8 +9,8 @@ config = yaml.safe_load(config_file)
 
 
 #-------------------------------------------------------#
-#for eraType in ["embed_2018", "data_2018_A", "data_2018_B", "data_2018_C", "data_2018_D"]:
-for eraType in ["mc_2018"]:
+
+for eraType in ["mc_2018", "embed_2018", "data_2018_A", "data_2018_B", "data_2018_C", "data_2018_D"]:
    for d in config[eraType]["datasets"]:
 
       dir = "crabJobConfigs/" + str(config[eraType]["year"]) + "/" 
