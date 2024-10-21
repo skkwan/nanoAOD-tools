@@ -89,7 +89,6 @@ mc_2017:
         Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-20_MA2-90: /Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-20_MA2-90_TauFilter_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM
         Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-60: /Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-60_TauFilter_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM
         Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-70: /Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-70_TauFilter_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM
-	# FIXME: currently missing
-	# Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-80: /Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-80_TauFilter_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM
+        Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-80: /Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-80_TauFilter_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM
         Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-90: /Cascade_GluGluH125toA1A2to3A1_A1to2Bor2Tau_MA1-30_MA2-90_TauFilter_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM
 # # #-------------------------------------------------------------#
