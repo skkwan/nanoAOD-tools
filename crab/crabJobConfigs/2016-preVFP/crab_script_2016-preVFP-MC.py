@@ -12,8 +12,8 @@ from PhysicsTools.NanoAODTools.postprocessing.modules.jme.jetmetHelperRun2 impor
 # this takes care of converting the input files from CRAB
 from PhysicsTools.NanoAODTools.postprocessing.framework.crabhelper import inputFiles, runsAndLumis
 
-jmeCorrections = createJMECorrector(isMC=False, dataYear=UL2018, runPeriod="C",
-                                    jesUncert="Total",
+jmeCorrections = createJMECorrector(isMC=True, dataYear="UL2016_preVFP", runPeriod="A",
+                                    jesUncert="Merged",
                                     jetType="AK4PFchs",
                                     noGroom="True",
                                     applyHEMfix=True,
