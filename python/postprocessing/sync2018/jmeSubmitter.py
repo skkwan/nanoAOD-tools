@@ -65,7 +65,10 @@ def main(argv=None):
     os.system('mkdir -p %s' % (dag_dir+'inputs'))
 
     # output dir
+<<<<<<< HEAD
 
+=======
+>>>>>>> cms-nanoAOD-master
     # output_dir = '/hdfs/store/user/%s/%s/%s/' % (pwd.getpwuid(os.getuid())[0], jobName, sample_name)
     output_dir = '/store/user/%s/%s/%s/' % (pwd.getpwuid(os.getuid())[0], jobName, sample_name)
 
